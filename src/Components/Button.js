@@ -1,6 +1,7 @@
-import * as React from 'react';
-import { experimentalStyled as styled } from '@mui/material/styles';
-import MuiButton from '@mui/material/Button';
+import * as React from "react";
+//Material UI
+import { experimentalStyled as styled } from "@mui/material/styles";
+import MuiButton from "@mui/material/Button";
 
 const ButtonRoot = styled(MuiButton)(({ theme, size }) => ({
   borderRadius: 0,
@@ -8,21 +9,20 @@ const ButtonRoot = styled(MuiButton)(({ theme, size }) => ({
   fontFamily: theme.typography.h1.fontFamily,
   padding: theme.spacing(2, 4),
   fontSize: theme.typography.pxToRem(14),
-  boxShadow: 'none',
-  '&:active, &:focus': {
-    boxShadow: 'none',
+  boxShadow: "none",
+  "&:active, &:focus": {
+    boxShadow: "none",
   },
-  ...(size === 'small' && {
+  ...(size === "small" && {
     padding: theme.spacing(1, 3),
     fontSize: theme.typography.pxToRem(13),
   }),
-  ...(size === 'large' && {
+  ...(size === "large" && {
     padding: theme.spacing(2, 5),
     fontSize: theme.typography.pxToRem(16),
   }),
 }));
 
-// See https://mui.com/guides/typescript/#usage-of-component-prop for why the types uses `C`.
 function Button(props) {
   return <ButtonRoot {...props} />;
 }

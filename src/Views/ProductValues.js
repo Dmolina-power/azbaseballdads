@@ -1,14 +1,15 @@
-import * as React from 'react';
-
-import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
-import Container from '@mui/material/Container';
-import Typography from '../Components/Typography';
+import * as React from "react";
+//Material UI
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
+import Container from "@mui/material/Container";
+//Components
+import Typography from "../Components/Typography";
 
 const item = {
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
   px: 5,
 };
 
@@ -16,21 +17,21 @@ function ProductValues() {
   return (
     <Box
       component="section"
-      sx={{ display: 'flex', overflow: 'hidden', bgcolor: 'secondary.light' }}
+      sx={{ display: "flex", overflow: "hidden", bgcolor: "secondary.light" }}
     >
-      <Container sx={{ mt: 15, mb: 30, display: 'flex', position: 'relative' }}>
+      <Container sx={{ mt: 15, mb: 30, display: "flex", position: "relative" }}>
         <Box
           component="img"
-          src="/static/productCurvyLines.png"
+          src="/static/img/productCurvyLines.png"
           alt="curvy lines"
-          sx={{ pointerEvents: 'none', position: 'absolute', top: -180 }}
+          sx={{ pointerEvents: "none", position: "absolute", top: -180 }}
         />
         <Grid container spacing={5}>
           <Grid item xs={12} md={4}>
             <Box sx={item}>
               <Box
                 component="img"
-                src="/static/stadium.png"
+                src="/static/img/stadium.png"
                 alt="suitcase"
                 sx={{ height: 55 }}
               />
@@ -39,9 +40,8 @@ function ProductValues() {
               </Typography>
               <Typography variant="h5">
                 {
-                  'Each season is 12 games long and practices are determined by the team.'
+                  "Each season is 12 games long and practices are determined by the team."
                 }
-
               </Typography>
             </Box>
           </Grid>
@@ -49,7 +49,7 @@ function ProductValues() {
             <Box sx={item}>
               <Box
                 component="img"
-                src="/static/baseball-player.png"
+                src="/static/img/baseball-player.png"
                 alt="graph"
                 sx={{ height: 55 }}
               />
@@ -58,10 +58,8 @@ function ProductValues() {
               </Typography>
               <Typography variant="h5">
                 {
-                  'Costs include the price of the jersey. The team will provide the jersey. costs also include field rental for the season.'
+                  "Costs include the price of the jersey. The team will provide the jersey. costs also include field rental for the season."
                 }
-
-                
               </Typography>
             </Box>
           </Grid>
@@ -69,7 +67,7 @@ function ProductValues() {
             <Box sx={item}>
               <Box
                 component="img"
-                src="/static/map.png"
+                src="/static/img/map.png"
                 alt="clock"
                 sx={{ height: 55 }}
               />
@@ -77,8 +75,9 @@ function ProductValues() {
                 East Valley Located
               </Typography>
               <Typography variant="h5">
-                {'Games and practices are held in the East Valley.(Gilbert,Chandler,Mesa,Queen Creek,San Tan Valley,)'}
-                
+                {
+                  "Games and practices are held in the East Valley.(Gilbert,Chandler,Mesa,Queen Creek,San Tan Valley,)"
+                }
               </Typography>
             </Box>
           </Grid>

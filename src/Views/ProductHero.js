@@ -1,25 +1,24 @@
-import * as React from 'react';
-import Button from '../Components/Button';
-import Typography from '../Components/Typography';
-import ProductHeroLayout from './ProductHeroLayout';
+import * as React from "react";
+//Components
+import Button from "../Components/Button";
+import Typography from "../Components/Typography";
+//Views
+import ProductHeroLayout from "./ProductHeroLayout";
 
 const backgroundImage =
-  'https://images.unsplash.com/photo-1617379773342-25be794be67c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1400&q=80';
-
-  
+  "https://images.unsplash.com/photo-1617379773342-25be794be67c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1400&q=80";
 
 export default function ProductHero() {
   return (
     <ProductHeroLayout
       sxBackground={{
         backgroundImage: `url(${backgroundImage})`,
-        backgroundColor: '#7fc7d9', // Average color of the background image.
-        backgroundPosition: 'center',
+        backgroundColor: "#7fc7d9",
+        backgroundPosition: "center",
       }}
     >
-      {/* Increase the network loading priority of the background image. */}
       <img
-        style={{ display: 'none' }}
+        style={{ display: "none" }}
         src={backgroundImage}
         alt="increase priority"
       />

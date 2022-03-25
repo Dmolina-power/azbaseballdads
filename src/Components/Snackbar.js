@@ -1,19 +1,17 @@
-import * as React from 'react';
-import PropTypes from 'prop-types';
-
-import { withStyles } from '@mui/styles';
-import MuiSnackbar from '@mui/material/Snackbar';
-import Slide from '@mui/material/Slide';
-// import CloseIcon from '@mui/icons-material/Close';
-// import InfoIcon from '@mui/icons-material/Info';
-import IconButton from '@mui/material/IconButton';
+import * as React from "react";
+import PropTypes from "prop-types";
+//Material UI
+import { withStyles } from "@mui/styles";
+import MuiSnackbar from "@mui/material/Snackbar";
+import Slide from "@mui/material/Slide";
+import IconButton from "@mui/material/IconButton";
 
 const styles = (theme) => ({
   content: {
     backgroundColor: theme.palette.secondary.light,
     color: theme.palette.text.primary,
-    flexWrap: 'inherit',
-    [theme.breakpoints.up('md')]: {
+    flexWrap: "inherit",
+    [theme.breakpoints.up("md")]: {
       borderTopLeftRadius: 0,
       borderTopRightRadius: 0,
       borderBottomRightRadius: 4,
@@ -22,8 +20,8 @@ const styles = (theme) => ({
   },
   contentMessage: {
     fontSize: 16,
-    display: 'flex',
-    alignItems: 'center',
+    display: "flex",
+    alignItems: "center",
   },
   contentAction: {
     paddingLeft: theme.spacing(2),
@@ -46,7 +44,7 @@ function Snackbar(props) {
 
   return (
     <MuiSnackbar
-      anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+      anchorOrigin={{ vertical: "top", horizontal: "center" }}
       autoHideDuration={6000}
       TransitionComponent={Transition}
       ContentProps={{
@@ -58,7 +56,6 @@ function Snackbar(props) {
       }}
       message={
         <React.Fragment>
-         
           <span>{message}</span>
         </React.Fragment>
       }
@@ -69,9 +66,7 @@ function Snackbar(props) {
           color="inherit"
           className={classes.close}
           onClick={() => closeFunc && closeFunc()}
-        >
-         
-        </IconButton>,
+        ></IconButton>,
       ]}
       {...other}
     />
@@ -79,14 +74,9 @@ function Snackbar(props) {
 }
 
 Snackbar.propTypes = {
-  /**
-   * Override or extend the styles applied to the component.
-   */
   classes: PropTypes.object.isRequired,
   closeFunc: PropTypes.func,
-  /**
-   * The message to display.
-   */
+
   message: PropTypes.node,
 };
 
